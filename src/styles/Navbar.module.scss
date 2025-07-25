@@ -1,0 +1,48 @@
+.navbar {
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+
+  a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.mobileToggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .mobileToggle {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    background: #002244;
+    padding: 1rem;
+  }
+
+  .show {
+    display: flex;
+  }
+}
