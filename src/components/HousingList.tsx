@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/HousingApp.module.scss';
+import styles from '../styles/housingOptions.module.scss';
 
 const mockListings = [
   {

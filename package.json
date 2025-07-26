@@ -13,6 +13,7 @@
     "@abgov/design-tokens": "1.1.0",
     "@abgov/react-components": "4.18.1",
     "@abgov/web-components": "1.18.1",
+    "@react-google-maps/api": "^2.20.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.30.1",
