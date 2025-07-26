@@ -3,7 +3,7 @@ import styles from '../styles/Page.module.scss'
 import { GoAButton, GoAButtonGroup } from '@abgov/react-components';
 import { useNavigate } from 'react-router-dom';
 
-const Citizenshihp: React.FC = () => {
+const Citizenship: React.FC = () => {
     const navigate = useNavigate();
 
     const previous = () => {
@@ -16,7 +16,7 @@ const Citizenshihp: React.FC = () => {
 
     return (
         <div className={`${styles.page} ${styles.citizenshihp}`}>
-            <h2>Citizenshihp</h2>
+            <h2>Citizenship</h2>
             <hr />
             <GoAButtonGroup alignment="start" gap="relaxed">
                 <GoAButton type="tertiary" onClick={previous}>
@@ -30,4 +30,4 @@ const Citizenshihp: React.FC = () => {
     )
 };
 
-export default Citizenshihp
+export default Citizenship
