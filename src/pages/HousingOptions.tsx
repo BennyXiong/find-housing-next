@@ -10,7 +10,7 @@ const HousingOptions: React.FC = () => {
     const navigate = useNavigate();
 
     const previous = () => {
-        navigate("../income")
+        navigate("../location")
     };
 
     return (
