@@ -5,8 +5,11 @@ import { GoAButton, GoAButtonGroup } from '@abgov/react-components';
 import HousingList from '../components/HousingList';
 import HousingMap from '../components/HousingMap';
 import { useNavigate } from 'react-router-dom';
+import { useHousehold } from '../hooks/useHousehold';
+import type { Community } from '../library/data';
 
 const HousingOptions: React.FC = () => {
+    const { location } = useHousehold();
     const navigate = useNavigate();
 
     const previous = () => {
@@ -18,10 +21,10 @@ const HousingOptions: React.FC = () => {
             <h2>Housing options</h2>
             <div className={styles.container}>
                 <div className={styles.sidebar}>
-                    <HousingList />
+                    <HousingList community={(location?.community as Community)?? 'Edmonton'}/>
                 </div>
                 <div className={styles.map}>
-                    <HousingMap />
+                    <HousingMap community={(location?.community as Community)?? 'Edmonton'}/>
                 </div>
             </div>
             <hr />

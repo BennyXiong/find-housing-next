@@ -5,6 +5,7 @@ interface ISituation {
     isErgent?: boolean;
     isUnderstood?: boolean;
 }
+
 class Situation implements IErrorState<Partial<ISituation>> {
     readonly helpFor?: string;
     readonly isErgent?: boolean;
@@ -26,7 +27,7 @@ class Situation implements IErrorState<Partial<ISituation>> {
         return this.validated ? {
             helpFor: !this.helpFor ? "An individual must be specified." : "",
             isErgent: this.isErgent === undefined ? "Please select Yes or No." : "",
-            isUnderstood: this.isErgent && this.isUnderstood === undefined ? "Please acknowledge the above if you wish to proceed." : "",
+            isUnderstood: this.isErgent && !this.isUnderstood ? "Please acknowledge the above if you wish to proceed." : "",
         } : {};
     }
 }

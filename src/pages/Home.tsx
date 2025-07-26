@@ -5,7 +5,7 @@ import { GoAAccordion, GoAButton, GoAButtonGroup, GoACallout, GoACheckbox, GoAFo
 import { Radio } from '../components/Radio'
 import { useHousehold } from '../hooks/useHousehold'
 import { convertToYesNo, hasErrors } from '../library/common'
-import { Situation } from '../library/Situation'
+import { Situation } from '../library/situation'
 import { useNavigate } from 'react-router-dom'
 
 const Home: React.FC = () => {
