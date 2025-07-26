@@ -1,5 +1,6 @@
 .page {
   padding: 2rem;
+  height: 100%;
 
   h2 {
     color: #003366;
@@ -8,5 +9,12 @@
 
   p {
     font-size: 1.1rem;
+  }
+}
+
+.home {
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
   }
 }

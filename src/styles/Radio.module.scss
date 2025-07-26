@@ -1,0 +1,66 @@
+@use "common" as *;
+
+.radio {
+	display: inline-flex;
+	flex-flow: row;
+	background: $goa-color-greyscale-white;
+	border-radius: $goa-border-radius-m;
+	margin: $spacing-2xs;
+
+	&:focus-visible {
+		outline: 3px solid $goa-color-interactive-focus;
+	}
+
+	.hdsRadioItem {
+		text-align: center;
+		padding: $spacing-xs $spacing-l $spacing-xs $spacing-l;
+		font-weight: $goa-font-weight-bold;
+
+		&:first-child {
+			border: 1px solid $goa-layout-gray;
+			border-top-left-radius: $goa-border-radius-m;
+			border-bottom-left-radius: $goa-border-radius-m;
+		}
+
+		&:last-child {
+			border-top-right-radius: $goa-border-radius-m;
+			border-bottom-right-radius: $goa-border-radius-m;
+		}
+
+		&:not(:first-child){
+			border-width: 1px 1px 1px 0;
+			border-style: solid;
+			border-color: $goa-layout-gray;
+		}
+
+		&.active {
+			background-color: $goa-interactive-blue;
+			color: $goa-color-greyscale-white;
+		}
+
+		&:hover {
+			border-color: $goa-color-interactive-hover;
+			background-color: $goa-color-interactive-hover !important;
+			color: $goa-color-greyscale-white;
+		}
+
+		&:focus,
+		&:active {
+			box-shadow: 0 0 0 3px $goa-color-interactive-focus;
+			border-color: $goa-color-interactive-hover !important;
+			background-color: $goa-color-interactive-hover;
+			outline: none;
+			color: $goa-color-greyscale-white;
+			border-radius: $goa-border-radius-m;
+			overflow: visible;
+			z-index: 1;
+		}
+	}
+
+	&:global(.error) {
+		box-shadow: 0 0 0 2px $goa-status-red;
+		label {
+			border-color: $goa-status-red !important;
+		}
+	}
+}

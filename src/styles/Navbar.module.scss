@@ -1,48 +1,61 @@
-.navbar {
-  background-color: #003366;
-  color: white;
-  padding: 1rem;
+@use "common" as *;
 
-  a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-  }
+.header {
+    background-color: $goa-color-greyscale-white;
+    width: 100%;
+    border-bottom: 1px solid $goa-color-greyscale-200;
+    --goa-border-width-s: 0;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.headerTitle {
+    display: inline-flex;
+    flex-flow: row;
+    width: 100%;
+    align-items: center;
+
+    .headerLink {
+        display: contents;
+        cursor: pointer;
+    }
+
+    .image {
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .headerTitleText {
+        display: inline-flex;
+        flex-flow: column;
+        justify-content: center;
+    }
 }
 
-.logo {
-  font-size: 1.5rem;
+.bannerContainer {
+    padding: 0 20px $goa-space-xs;
+    background-color: $goa-color-brand-default;
+    border-bottom: $goa-space-xs solid $goa-color-brand-light;
 }
 
-.mobileToggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-.links {
-  display: flex;
-}
-
-@media (max-width: 768px) {
-  .mobileToggle {
-    display: block;
-  }
-
-  .links {
-    display: none;
-    flex-direction: column;
-    background: #002244;
-    padding: 1rem;
-  }
-
-  .show {
+.headerBanner {
     display: flex;
-  }
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: $goa-color-greyscale-white;
+    margin: auto;
+
+    & .title {
+        margin: auto;
+    }
+
+    & p {
+        margin: 0 0 $goa-space-l;
+        font-size: $goa-font-size-7;
+    }
+
+    & h2 {
+        color: $goa-color-greyscale-white;
+        font-weight: bold;
+        margin: $goa-space-l 0 $goa-space-xs
+    }
 }
