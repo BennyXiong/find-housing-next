@@ -2,6 +2,8 @@ import React from 'react';
 import { GoogleMap, useJsApiLoader, MarkerF } from '@react-google-maps/api';
 import { locationsDict, type Community } from '../library/data';
 
+const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
 const containerStyle = {
   width: '100%',
   height: '100%',
@@ -10,7 +12,7 @@ const containerStyle = {
 const HousingMap: React.FC<{ community: Community }> = ({ community }) => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyAOEZzTGhOjO8jkbUVBH7fzeA2cGWYwzHw', // Replace with your actual API key
+    googleMapsApiKey: apiKey, // Replace with your actual API key
   });
 
   return isLoaded ? (
