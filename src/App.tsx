@@ -17,8 +17,8 @@ const App: React.FC = () => {
   return (
     <>
       <Navbar />
-      <Stepper />
       <div className={"container"}>
+        <Stepper />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/citizenship" element={<Citizenship />} />
